@@ -12,15 +12,15 @@ public class Produtor extends Thread  {
 	}
 
 	public void run() {
-	    for (int i = 0; i < 10; i++) {
-	        try {
-	        	estoque.put(i);
-	            System.out.println("Produtor " + id + " produziu " + i);
-	            sleep(1000);
-	        } 
-	        catch (InterruptedException e) { 
-	        	System.exit(1);
-	        }
-	    }
+		for (int i = 0; i < 10; i++) {
+			try {
+				estoque.put(i);
+				System.out.println("Produtor " + id + " produziu " + i);
+				sleep(1000);
+			} 
+			catch (InterruptedException e) { 
+				System.exit(1);
+			}
+		}
 	}
 }
